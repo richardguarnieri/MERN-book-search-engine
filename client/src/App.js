@@ -4,27 +4,23 @@ import SearchBooks from './pages/SearchBooks';
 import SavedBooks from './pages/SavedBooks';
 import Navbar from './components/Navbar';
 
-import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink  } from '@apollo/client';
-import { setContext } from '@apollo/client/link/context';
+import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink, ApolloLink, concat } from '@apollo/client';
 
-const httpLink = createHttpLink({
-  uri: '/graphql',
-});
-
-const authLink = setContext((_, { headers }) => {
+const httpLink = new HttpLink({ uri: '/graphql' });
+const authLink = new ApolloLink((operation, forward) => {
   // get the authentication token from local storage if it exists
   const token = localStorage.getItem('id_token');
-  // return the headers to the context so httpLink can read them
-  return {
+  // add the authorization to the headers
+  operation.setContext(({ headers = {} }) => ({
     headers: {
       ...headers,
       authorization: token ? `Bearer ${token}` : '',
-    },
-  };
+    }
+  }))
 });
 
 const client = new ApolloClient({
-  link: authLink.concat(httpLink),
+  link: concat(authLink, httpLink),
   cache: new InMemoryCache()
 })
 
