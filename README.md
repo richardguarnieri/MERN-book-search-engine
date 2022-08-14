@@ -11,7 +11,7 @@ Email: `richard.gm@outlook.com`
 LinkedIn Username: `rguarnieri`
 Twitter Username: `ric_guarnieri`
 Project Title: `MERN Book Search Engine`
-Project Description: `A MERN Application using GraphQL!`
+Project Description: `A MERN (MongoDB, Express, React and Node) Application using GraphQL!`
 -->
 
 <!-- Please also update the following links -->
@@ -58,7 +58,7 @@ Project Description: `A MERN Application using GraphQL!`
     </a>
     <h1 align="center">MERN Book Search Engine</h1>
     <div>
-        A MERN Application using GraphQL!
+        A MERN (MongoDB, Express, React and Node) Application using GraphQL!
         <br>
         <a href="https://github.com/richardguarnieri/MERN-book-search-engine">
             <strong>Explore Documentation</strong>
