@@ -20,14 +20,21 @@ const resolvers = {
             if (!user) {
                 throw new AuthenticationError('Invalid credentials!');
             }
-            const correctPw = await user.isCorrectPassword(body.password);
+            const correctPw = await user.isCorrectPassword(password);
             if (!correctPw) {
                 throw new AuthenticationError('Invalid credentials!');
             }
             const token = signToken(user);
             return { token, user };
         },
-        addUser: async (parent, args, context) => {},
+        addUser: async (parent, { username, email, password }) => {
+            const user = await User.create({ username, email, password });
+            if (!user) {
+                throw new AuthenticationError('Something is wrong!')
+            }
+            const token = signToken(user);
+            return { token, user };
+        },
         saveBook: async (parent, args, context) => {},
         removeBook: async (parent, args, context) => {},
     }
