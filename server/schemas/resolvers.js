@@ -15,7 +15,18 @@ const resolvers = {
         },
 
     Mutation: {
-        login: async (parent, args, context) => {},
+        login: async (parent, { email, password }) => {
+            const user = await User.findOne({ email });
+            if (!user) {
+                throw new AuthenticationError('Invalid credentials!');
+            }
+            const correctPw = await user.isCorrectPassword(body.password);
+            if (!correctPw) {
+                throw new AuthenticationError('Invalid credentials!');
+            }
+            const token = signToken(user);
+            return { token, user };
+        },
         addUser: async (parent, args, context) => {},
         saveBook: async (parent, args, context) => {},
         removeBook: async (parent, args, context) => {},
