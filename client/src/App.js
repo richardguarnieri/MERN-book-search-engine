@@ -17,6 +17,7 @@ const authLink = new ApolloLink((operation, forward) => {
       authorization: token ? `Bearer ${token}` : '',
     }
   }))
+  return forward(operation);
 });
 
 const client = new ApolloClient({
