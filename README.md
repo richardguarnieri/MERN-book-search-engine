@@ -16,8 +16,8 @@ Project Description: `A MERN (MongoDB, Express, React and Node) Application usin
 
 <!-- Please also update the following links -->
 [logo]: ./img/logo.png
-[application-image]: ./img/app-image.webp
-[application-url]: heroku-link-here
+[application-image]: ./img/app-image.png
+[application-url]: https://peaceful-hollows-56780.herokuapp.com/
 
 <div id="home"><div> 
 
@@ -95,9 +95,11 @@ Project Description: `A MERN (MongoDB, Express, React and Node) Application usin
 
 [![Application Image][application-image]][application-url]
 
-TBA...
+The MERN stack is a cluster of powerful and robust technologies used to create scalable web applications. This stack has significant benefits when developing high quality web applications, it is highly malleable and allows applications and software to be developed rapidly.
 
-The app is deployed on Heroku: [heroku-link-here][application-url].
+This is a fully functioning Google Books API search engine with a GraphQL API built with Apollo Server. The app was built using the MERN stack with a React front end, MongoDB database, and Node.js/Express.js server and API. It allows users to save book searches to the back end and uses JWT (JSON Web Tokens) for authentication.
+
+The app is deployed on Heroku: [https://peaceful-hollows-56780.herokuapp.com/][application-url].
 
 <p align="right"> - <a href="#home">Return to Home</a></p>
 
@@ -111,16 +113,16 @@ The app is deployed on Heroku: [heroku-link-here][application-url].
 * [Node.js](https://nodejs.org/en/)
 * [GraphQL](https://graphql.org/)
 * [bcrypt](https://www.npmjs.com/package/bcrypt)
-
-
-
+* [apollo-server-express](https://www.apollographql.com/docs/)
+* [@apollo/client](https://www.apollographql.com/docs/)
+* [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken)
 
 <p align="right"> - <a href="#home">Return to Home</a></p>
 
 
 <!-- Getting Started -->
 ## Getting Started
-Make sure you have an active internet connection. To use the application all you need to do is click Heroku's link: [heroku-link-here][application-url].
+Make sure you have an active internet connection. To use the application all you need to do is click Heroku's link: [https://peaceful-hollows-56780.herokuapp.com/][application-url].
 
 <p align="right"> - <a href="#home">Return to Home</a></p>
 
@@ -137,7 +139,9 @@ Unless you are cloning the repo, nothing to install. Otherwise, you would need a
 
 <!-- How to Use -->
 ## How to Use
-TBA...
+When you first open the application you will be routed to the search books page. You can use this page to search for any books such as "Star Wars" or "The Lord of the Rings". In order to save books to your book collection, you must first sign up to create an account. After you have signed in you will see an option to save any book to your collection after doing a search. You can view your collection by going to the navigation bar and clicking "See Your Books". In this page, you will also have the option to remove books from your collection.
+
+All in all, a simple MERN book search application!
 
 _For more examples, please refer to the [Documentation][documentation-url]._
 
@@ -166,7 +170,7 @@ See `LICENSE` for more information.
 ## Contact
 Richard Guarnieri: richard.gm@outlook.com · LinkedIn: [rguarnieri][linkedin-url] · Twitter: [@ric_guarnieri][twitter-url]
 
-Application URL: [heroku-link-here][application-url]
+Application URL: [https://peaceful-hollows-56780.herokuapp.com/][application-url]
 
 <p align="right"> - <a href="#home">Return to Home</a></p>
 
