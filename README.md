@@ -16,7 +16,7 @@ Project Description: `A MERN (MongoDB, Express, React and Node) Application usin
 
 <!-- Please also update the following links -->
 [logo]: ./img/logo.png
-[application-image]: ./img/app-image.png
+[application-image]: ./img/app-image-v2.png
 [application-url]: https://peaceful-hollows-56780.herokuapp.com/
 
 <div id="home"><div> 
